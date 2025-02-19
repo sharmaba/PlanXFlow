@@ -1,43 +1,79 @@
-# PlanXFlow
-Welcome to PlanXFlow, a software development lifecycle designed for engineering AI planning systems. PlanXFlow is developed with the ambition to provide a structured, waterfall-like yet iterative approach tailored to the unique challenges in AI planning. This lifecycle encompasses ten carefully designed phases, guiding practitioners and researchers from the conceptualization of AI planning systems to their deployment and beyond.
+# Planning Functionalities and Classes
 
-PlanXFlow acts as a foundational guide, promoting a holistic understanding of AI planning system development. It is designed to foster a common language among practitioners, researchers, and stakeholders, guiding them through the intricacies of AI planning.
+This page provides an overview of various planning functionalities in AI systems, including their definitions, and categorization in classes. These functionalities serve as building blocks for designing, deploying, and integrating advanced AI planning systems.
 
-## The Ten Phases
+---
 
-1. **Requirements Analysis**
-2. **Planning Model Formulation**
-3. **Domain Model Design**
-4. **System Design and Architecture**
-5. **Planning Technology Selection**
-6. **Implementation**
-7. **Testing**
-8. **Deployment**
-9. **Monitoring**
-10. **Analysis**
+## Planning Functionalities
 
-## Innovative Elements
+### Core Functionalities
 
-PlanXFlow introduces and emphasizes crucial concepts often sidelined in the academic literature on AI planning:
+| **Functionality**      | **Description**                                                                                              |
+|------------------------|----------------------------------------------------------------------------------------------------------|
+| **Parsing**            | Parsing analyzes whether a planning problem conforms to the syntactic rules of the chosen modeling language, such as PDDL or HDDL. This ensures that the problem definitions are valid and interpretable, identifying errors early and reducing debugging time. |
+| **Conversion**         | Conversion transforms planning data into representations tailored to specific needs, such as translating domain models into programming objects or plan outputs into visualization formats. The conversion to programming objects would be to enable planner to solve the planning problems. |
+| **Problem Generation** | Automatically creates planning problem instances using real-time data, such as IoT inputs. This functionality adapts systems to dynamic environments, vital for fields like robotics, living environments, and autonomous driving. |
+| **Plan Generation**    | Computes a course of action that can take a form of a sequence, set, policy, or other structure. The execution of the course of action or plan in the initial state should satisfy the objective e.g. a goal state, a goal task etc. Various algorithms and methods can be used to generate plans. |
 
-- **Planning Model**: A conceptual model encompassing the interplay among a suitable planning type, relevant world context, and desired user features.
-- **Technology Selection**: Highlights the importance of choosing appropriate planning technologies and the necessary support for such decision-making.
-- **Data Provenance**: To ensure clarity and traceability of data sources and transformations throughout all lifecycle phases.
+---
+### Plan Execution and Management Functionalities
 
-## Core Features
+| **Functionality**      | **Description**                                                                                              |
+|------------------------|----------------------------------------------------------------------------------------------------------|
+| **Execution**          | Manages the execution of plans in real-world or simulated environments, ensuring correct sequencing and integration with external systems.  |
+| **Monitoring**         | Observes plan execution to detect anomalies, such as delays or failures. Triggers fault tolerance to maintain alignment with goals. |
+| **Fault Tolerance**          | Addresses unexpected events during execution, providing error recovery and re-planning mechanisms. Essential for critical applications like healthcare or autonomous systems. |
+| **Plan Validation**    | Validates plans for feasibility and consistency before execution, improving reliability and user trust.  |
 
-- **Adaptability**: Tailor the lifecycle to meet the specific needs of the respective project.
-- **Scalability**: Expand or condense phases to match the project's development scale.
-- **Transparency**: Based on clear, understandable processes.
-- **Future-Proof**: Stay ahead with easily upgradable methodologies.
+---
+### Domain Learning and Adaptation Functionalities
 
-## Engagement and Contribution
+| **Functionality**      | **Description**                                                                                              |
+|------------------------|----------------------------------------------------------------------------------------------------------|
+| **Knowledge Learning** | Automates the creation of domain models, heuristics, and control knowledge. By utilizing machine learning, it minimizes manual effort and adapts to changing scenarios. |
 
-Your experience and insights are invaluable to the evolution of PlanXFlow. Whether applied in an industrial setting or academic research, sharing your thoughts can help enhance PlanXFlow for everyone.
+---
 
-- **For industrial applications**: Please reach out to share how PlanXFlow has been integrated and adapted for your projects.
-- **For academic research**: If you use PlanXFlow in your research work, please cite the following papers:
+### Performance-Driven Functionalities
 
-[1] Georgievski, I. Software Development Lifecycle for Engineering AI Planning Systems. International Conference on Software Technologies, pages 751–760, 2023.
+| **Functionality**      | **Description**                                                                                              |
+|------------------------|----------------------------------------------------------------------------------------------------------|
+| **Learning-Enhanced Plan Generation**           | Enhances planning efficiency and quality by learning from past results, refining algorithms, and minimizing computational overhead. |
+| **Strategising**       | Applies domain-specific heuristics or preferences to guide planning, enabling high-quality or approximate solutions quickly. Strategies can optimize time, cost, or other objectives. |
 
-[2] Georgievski, I. Conceptualising Software Development Lifecycle for Engineering AI Planning Systems. IEEE/ACM International Conference on AI Engineering – Software Engineering for AI, pages 88–89, 2023.
+
+---
+
+### System Operation Functionalities
+
+| **Functionality**      | **Description**                                                                                              |
+|------------------------|----------------------------------------------------------------------------------------------------------|
+| **Data Management**    | Manages the storage and retrieval of domain models, problem instances, plans and other relevant data, ensuring accessibility and scalability. |
+| **System Management**  | Handles coordination and communication across planning components, managing errors and ensuring smooth operations. |
+| **System Monitoring**  | Oversees the performance and health of the planning system, tracking resource usage and interactions for optimization. |
+
+---
+### Human-Interaction Functionalities
+
+| **Functionality**      | **Description**                                                                                              |
+|------------------------|----------------------------------------------------------------------------------------------------------|
+| **Explanation**        | Offers insights into planning decisions, explaining why actions were chosen or structured. Enhances transparency and user understanding through visual aids or summaries. |
+| **Modelling**          | Enables manual specification of planning problems through textual or graphical tools, simplifying complex scenarios for users. |
+| **Visualization**      | Provides graphical representations, such as charts or tables, to aid decision-making and track execution progress in real-time. |
+---
+
+### Other Functionalities
+
+| **Functionality**      | **Description**                                                                                              |
+|------------------------|----------------------------------------------------------------------------------------------------------|
+| **Translation**      | Converts planning problems into alternative representations, such as constraint satisfaction problems. This approach may offer advantages in terms of efficiency, feasibility, and simplicity. |
+
+---
+
+## Positioning of Planning Classes 
+
+The positioning of planning classes is defined by two dimensions: capability and evolution of use. The capability dimension represents the degree to which a planning system can perform complex tasks, ranging from basic functionalities to advanced, fully integrated planning operations. The evolution of use dimension reflects the system's potential to develop and adapt over time, from experimental and prototyping phases to widespread deployment in critical applications. Together, these dimensions provide a framework for understanding how different planning functionalities progress in complexity and real-world applicability.
+
+
+
+---
